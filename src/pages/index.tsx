@@ -38,7 +38,7 @@ export default function Home() {
       sound.stop();
     }
 
-    const audioUrl = "/tezz.mp3";
+    const audioUrl = "/tezzz.mp3";
 
     const newSound = new Howl({
       src: [audioUrl],
@@ -139,7 +139,7 @@ export default function Home() {
             <div className="w-3/4 m-auto relative">
               <motion.div
                 key={"content"}
-                className="h-screen bg-gray-100 flex flex-col items-center overflow-hidden relative p-12"
+                className="h-screen w-full bg-gray-100 flex flex-col items-center overflow-hidden relative p-4"
                 initial={{ opacity: 0, y: 200, scale: 0.5 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -150,29 +150,87 @@ export default function Home() {
                 }}
               >
                 <div className="absolute inset-0 bg-white opacity-70 z-0"></div>
-                <div className="flex justify-around h-max">
-                  <Drag key="1" direction="left">
-                    <Image
-                      src="/2.svg"
-                      alt="Deskripsi Gambar"
-                      width={400}
-                      height={300}
-                      layout="intrinsic"
-                      quality={75}
-                    />
-                  </Drag>
-                  <Drag key="1" direction="right">
-                    <Image
-                      src="/1.svg"
-                      alt="Deskripsi Gambar"
-                      width={400}
-                      height={300}
-                      layout="intrinsic"
-                      quality={75}
-                    />
-                  </Drag>
+                <div className="relative flex flex-col bg-green-200 h-screen w-full">
+                  <div className="flex h-[50%] bg-yellow-500">
+                    <div className="bg-slate-300 flex-1 relative">
+                      <Fade key="1" direction="right">
+                        <Image
+                          src="/2.svg"
+                          alt="Deskripsi Gambar"
+                          fill
+                          objectFit="contain"
+                          quality={75}
+                        />
+                      </Fade>
+                    </div>
+                    <div className="bg-orange-600 flex-1 relative overflow-visible">
+                      <Fade key="1" direction="right">
+                        <Image
+                          src="/1.svg"
+                          alt="Deskripsi Gambar"
+                          fill
+                          objectFit="contain"
+                          quality={75}
+                          style={{ backgroundColor: 'white' }}
+                        />
+                      </Fade>
+                    </div>
+                  </div>
+                  <div className="flex absolute bottom-0 h-[60%] w-full z-10">
+                    <div className="flex-1 relative">
+                      <Fade key="1" direction="right">
+                        <Image
+                          src="/3.svg"
+                          alt="Deskripsi Gambar"
+                          fill
+                          objectFit="cover"
+                          objectPosition="50% 50%"
+                          quality={75}
+                          style={{
+                            transform: 'scale(.4)',
+                            transformOrigin: 'center',
+                            backgroundImage: 'red'
+                          }}
+                        />
+                      </Fade>
+                    </div>
+                    <div className="bg-orange-600 flex-1 relative overflow-visible">
+                      <Fade key="1" direction="right">
+                        <Image
+                          src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          alt="Deskripsi Gambar"
+                          fill
+                          objectFit="contain"
+                          quality={75}
+                          style={{ backgroundColor: 'white' }}
+                        />
+                      </Fade>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-full flex justify-around absolute bottom-0">
+                {/* <div className="flex justify-around h-max w-full">
+                    <div className="w-full h-1/3 relative rounded-3xl overflow-hidden">
+                      <Fade key="1" direction="right">
+                        <Image
+                          src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          alt="Deskripsi Gambar"
+                          fill
+                          objectFit="cover"
+                          quality={75}
+                        />
+                      </Fade>
+                    </div>
+                    <Drag key="2" direction="right">
+                      <Image
+                        src="/1.svg"
+                        alt="Deskripsi Gambar"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        quality={75}
+                      />
+                    </Drag>
+                </div> */}
+                {/* <div className="w-full flex justify-around absolute bottom-0">
                   <Drag key="1" direction="left">
                     <Image
                       src="/3.svg"
@@ -193,7 +251,7 @@ export default function Home() {
                       quality={75}
                     />
                   </Drag>
-                </div>
+                </div> */}
               </motion.div>
               <motion.div
                 key={"content"}
@@ -239,16 +297,15 @@ export default function Home() {
                   </div>
                 </Fade>
                 <div className="w-full h-1/3 relative rounded-3xl overflow-hidden">
-                <Fade key="1" direction="right">
-                  <Image
-                    src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Deskripsi Gambar"
-                    fill
-                    objectFit="cover"
-                    quality={75}
-                  />
-                </Fade>
-
+                  <Fade key="1" direction="right">
+                    <Image
+                      src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Deskripsi Gambar"
+                      fill
+                      objectFit="cover"
+                      quality={75}
+                    />
+                  </Fade>
                 </div>
               </motion.div>
 
