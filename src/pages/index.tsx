@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Qwitcher_Grypen, Sail, Roboto, Playfair_Display } from "next/font/google";
+import { Qwitcher_Grypen, Sail, Roboto, Playfair_Display, Alegreya, Dancing_Script, Lobster } from "next/font/google";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import { Howl } from "howler";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
@@ -13,6 +13,25 @@ import Drag from "@/components/scrollAnimation/Drag";
 import Image from "next/image";
 import Countdown from "react-countdown";
 import Fade from "@/components/scrollAnimation/Fade";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { fadingStaggerMotion, fromLeftMotion } from "@/lib/motions";
+
+
+export const dancing = Dancing_Script({
+  weight: "400",
+  subsets: ["latin"]
+})
+
+export const lobster = Lobster({
+  weight: "400",
+  subsets: ["latin"]
+})
+
+export const alegreya = Alegreya({
+  weight: "500",
+  style: "italic",
+  subsets: ["latin"],
+});
 
 export const qwitcher = Qwitcher_Grypen({
   weight: "400",
@@ -32,6 +51,63 @@ export const roboto = Roboto({
   weight: "400",
   subsets: ["latin"],
 });
+
+export const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
+  if (completed) {
+    // Render setelah countdown selesai
+    return <span>Countdown selesai!</span>;
+  } else {
+    // Render countdown
+    return (
+      <motion.div
+        variants={fromLeftMotion}
+        initial="initial"
+        whileInView="whileInView"
+        className="flex flex-row w-full">
+        <Card className={`${lobster.className} w-1/4`}>
+          <CardHeader>
+            <CardTitle>Hari</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl">{days}
+              <span className="text-sm">days</span>
+            </p>
+          </CardContent>
+        </Card>
+        <Card className={`${lobster.className} w-1/4`}>
+          <CardHeader>
+            <CardTitle>Jam</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl">{hours}
+              <span className="text-sm">hours</span>
+            </p>
+          </CardContent>
+        </Card>
+        <Card className={`${lobster.className} w-1/4`}>
+          <CardHeader>
+            <CardTitle>Menit</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl">{minutes}
+              <span className="text-sm">min</span>
+            </p>
+          </CardContent>
+        </Card>
+        <Card className={`${lobster.className} w-1/4`}>
+          <CardHeader>
+            <CardTitle>Detik</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-3xl">{seconds}
+              <span className="text-sm">sec</span>
+            </p>
+          </CardContent>
+        </Card>
+      </motion.div>
+    );
+  }
+};
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState<boolean>(false);

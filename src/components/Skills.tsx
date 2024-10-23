@@ -5,35 +5,32 @@ import {
   fadingStaggerMotion,
   fromLeftMotion,
 } from "@/lib/motions";
+import { alegreya, renderer } from "@/pages";
 import { motion } from "framer-motion";
+import Countdown from "react-countdown";
 
 
 const Skills = () => {
   return (
-    <div className="skill flex flex-col justify-center gap-12">
+    <div className="skill w-screen flex flex-col justify-center gap-12 bg-[#FEF9D9] px-8 py-28">
       <motion.h2
         variants={fromLeftMotion}
         initial="initial"
         whileInView="whileInView"
-        className="font-bold text-2xl justify-center"
+        className={`${alegreya.className} font-bold text-2xl justify-center`}
       >
-        SKILLS
+        Menuju hari bahagia
       </motion.h2>
       <motion.div
-        variants={fadingStaggerMotion}
+        variants={fromLeftMotion}
         initial="initial"
         whileInView="whileInView"
-        className="flex flex-wrap gap-4"
+        className="flex flex-row w-full"
       >
-        {SKILLS.map((item) => (
-          <motion.span
-            variants={fadingChildrenMotion}
-            key={item}
-            className="rounded p-3 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
-          >
-            {item}
-          </motion.span>
-        ))}
+        <Countdown
+          date={Date.now() + 10000000} // 10 detik dari sekarang
+          renderer={renderer}
+        />
       </motion.div>
     </div>
   );

@@ -1,45 +1,34 @@
 "use client";
 import { fadingMotion, fromLeftMotion } from "@/lib/motions";
+import { alegreya, dancing } from "@/pages";
 import { motion } from "framer-motion";
 
 
 const About = () => {
   return (
-    <div className="bio flex flex-col justify-center gap-12">
-      <motion.h2
-        variants={fromLeftMotion}
-        initial="initial"
-        whileInView={"whileInView"}
-        className="font-bold text-2xl justify-center"
-      >
-        ABOUT
-      </motion.h2>
+    <div className={`bio flex flex-col justify-center gap-12 px-8`}>
+
       <motion.div
         variants={fadingMotion}
         initial="initial"
         whileInView={"whileInView"}
-        className="text-lg"
+        className="text-xl"
       >
-        <p>
-          I&apos;ve been working with some frontend technologies such as
-          React.js, Next.js, Tailwind and others.
-        </p>
-        <p>
-          My educational background as an Information Technology college student
-        </p>
-        <p>
-          I&apos;m reliable person, motivated and able to adapt quickly to new
-          technologies and exploring new things.
+        <p className={`${dancing.className} italic text-center`}>
+          Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
+          untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya,
+          dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian
+          itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
         </p>
       </motion.div>
-      <motion.span
-        variants={fadingMotion}
+      <motion.h2
+        variants={fromLeftMotion}
         initial="initial"
         whileInView={"whileInView"}
-        className="italic"
+        className={`font-bold text-xl text-center justify-center ${dancing.className} italic`}
       >
-        As long as you live keep learning how to live
-      </motion.span>
+        - QS. Ar-Rum : 21 -
+      </motion.h2>
       <motion.div
         variants={fadingMotion}
         initial="initial"

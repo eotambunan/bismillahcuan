@@ -6,17 +6,18 @@ import {
 import { motion } from "framer-motion";
 import ExperienceList from "./ExperienceList";
 import { EXPERIENCES } from "@/lib/constants";
+import { alegreya } from "@/pages";
 
 const Experiences = () => {
   return (
-    <div className="bio flex flex-col justify-center gap-12 pb-48">
+    <div className="bio flex flex-col justify-center gap-12 pb-48 px-8">
       <motion.h2
         variants={fromLeftMotion}
         initial="initial"
         whileInView="whileInView"
-        className="font-bold text-2xl justify-center"
+        className={`font-bold text-2xl justify-center ${alegreya.className}`}
       >
-        EXPERIENCES
+        Our Love Story
       </motion.h2>
       <motion.div
         variants={fadingExpStaggerMotion}

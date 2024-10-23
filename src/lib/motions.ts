@@ -8,7 +8,23 @@ export const fromLeftMotion = {
     x: 0,
     transition: {
       delay: 0.3,
-      duration: 0.7,
+      duration: 2,
+      type: "spring",
+    },
+  },
+};
+
+export const fromRightMotion = {
+  initial: {
+    opacity: 0,
+    x: 40,
+  },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+      duration: 2,
       type: "spring",
     },
   },
@@ -22,7 +38,7 @@ export const fadingMotion = {
     opacity: 1,
     transition: {
       delay: 0.3,
-      duration: 1,
+      duration: 2,
     },
   },
 };
@@ -35,7 +51,7 @@ export const fadingStaggerMotion = {
     x: 0,
     transition: {
       delay: 0.3,
-      duration: 1,
+      duration: 3,
       delayChildren: 0.2,
       staggerChildren: 0.15,
       type: "tween",
