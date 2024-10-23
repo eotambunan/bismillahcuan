@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Qwitcher_Grypen, Sail, Roboto } from "next/font/google";
+import { Qwitcher_Grypen, Sail, Roboto, Playfair_Display } from "next/font/google";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import { Howl } from "howler";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
@@ -14,15 +14,21 @@ import Image from "next/image";
 import Countdown from "react-countdown";
 import Fade from "@/components/scrollAnimation/Fade";
 
-const qwitcher = Qwitcher_Grypen({
+export const qwitcher = Qwitcher_Grypen({
   weight: "400",
   subsets: ["latin"],
 });
-const sail = Sail({
+
+export const playfair = Playfair_Display({
   weight: "400",
   subsets: ["latin"],
 });
-const roboto = Roboto({
+
+export const sail = Sail({
+  weight: "400",
+  subsets: ["latin"],
+});
+export const roboto = Roboto({
   weight: "400",
   subsets: ["latin"],
 });
