@@ -8,7 +8,53 @@ export const fromLeftMotion = {
         x: 0,
         transition: {
             delay: 0.3,
-            duration: 0.7,
+            duration: 1,
+            type: "spring",
+        },
+    },
+};
+
+export const fromRightMotion = {
+    initial: {
+        opacity: 0,
+        x: 20,
+    },
+    whileInView: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: 0.3,
+            duration: 1,
+            type: "spring",
+        },
+    },
+};
+export const fromTopMotion = {
+    initial: {
+        opacity: 0,
+        y: -20,
+    },
+    whileInView: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.3,
+            duration: 1,
+            type: "spring",
+        },
+    },
+};
+export const fromBottomMotion = {
+    initial: {
+        opacity: 0,
+        y: 20,
+    },
+    whileInView: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.3,
+            duration: 1,
             type: "spring",
         },
     },
