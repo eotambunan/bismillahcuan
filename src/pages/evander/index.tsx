@@ -1,5 +1,5 @@
 import { Box, Button, Container, Typography } from "@mui/material"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "./Evander.module.css"
 import { motion, AnimatePresence, color } from "framer-motion";
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -8,6 +8,7 @@ import PinDropIcon from '@mui/icons-material/PinDrop';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import { fadingMotion, fromBottomMotion, fromLeftMotion, fromRightMotion } from "@/lib/motion";
 import Counter from "@/components/Counter/Counter";
+import MyCarousel from "@/components/evander/MyCarousel";
 
 
 export default function Evander() {
@@ -17,6 +18,7 @@ export default function Evander() {
             () => setIsOpened(!isOpened), 500
         )
     }
+
     const Header = () => {
         return (
             <Container className={`h-screen text-center flex justify-center items-center`}>
@@ -267,6 +269,36 @@ export default function Evander() {
         )
     }
 
+    const images = [
+        {
+            photo: "/photo/1.jpeg"
+        },
+        {
+            photo: "/photo/2.jpeg"
+        },
+        {
+            photo: "/photo/3.jpeg"
+        },
+        {
+            photo: "/photo/4.jpeg"
+        },
+        {
+            photo: "/photo/5.jpeg"
+        },
+        {
+            photo: "/photo/cover.jpeg"
+        },
+    ]
+
+    const Body3 = () => {
+        return (
+            <div className='flex flex-col justify-center items-center'>
+                <h1 className={`${styles.h1}`}>Momen Kami</h1>
+                <MyCarousel images={images}/>
+            </div>
+        )
+    }
+
     return (
         <AnimatePresence>
             {!isOpened ? (
@@ -289,6 +321,7 @@ export default function Evander() {
                 >
                     <Body1 />
                     <Body2 />
+                    <Body3 />
                     <Box className='h-screen'></Box>
                 </motion.div>
             )}
