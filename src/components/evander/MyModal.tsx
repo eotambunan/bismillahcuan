@@ -54,7 +54,6 @@ const Thumb: React.FC<PropType> = (props) => {
 
 export default function MyModal(props: MyModal) {
     const { isOpen, setIsOpen, images, options } = props
-    console.log(images)
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options)
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
         containScroll: 'keepSnaps',
