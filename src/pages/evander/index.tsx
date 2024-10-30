@@ -1,14 +1,14 @@
 import {
- Box,
- Button,
- Container,
- FormControl,
- FormControlLabel,
- FormLabel,
- Radio,
- RadioGroup,
- TextField,
- Typography,
+  Box,
+  Button,
+  Container,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Radio,
+  RadioGroup,
+  TextField,
+  Typography,
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Evander.module.css";
@@ -19,12 +19,12 @@ import PinDropIcon from "@mui/icons-material/PinDrop";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import {
- fadingChildrenMotion,
- fadingMotion,
- fromBottomMotion,
- fromLeftMotion,
- fromRightMotion,
- fromTopMotion,
+  fadingChildrenMotion,
+  fadingMotion,
+  fromBottomMotion,
+  fromLeftMotion,
+  fromRightMotion,
+  fromTopMotion,
 } from "@/lib/motions";
 import Counter from "@/components/Counter/Counter";
 import MyCarousel from "@/components/evander/MyCarousel";
@@ -41,9 +41,9 @@ import {
 import { useSearchParams } from "next/navigation";
 
 type JobType = {
- title: string;
- description: string;
- date: string;
+  title: string;
+  description: string;
+  date: string;
 };
 
 interface IFormInput {
@@ -227,191 +227,191 @@ export default function Evander() {
   );
  };
 
- const Body2 = () => {
-  return (
-   <>
-    <Container
-     className={`h-full text-center flex flex-col justify-center items-center`}
-    >
-     <div className="relative w-[98%] h-full m-auto border-none">
-      <div className="relative h-auto inset-0 bg-gradient-to-tr from-amber-300 via-yellow-700 to-amber-500 p-[8px] rounded-lg">
-       <div className="w-full h-full bg-white py-20 px-8">
-        <motion.h1
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-         className={`${styles.h1}`}
+  const Body2 = () => {
+    return (
+      <>
+        <Container
+          className={`h-full text-center flex flex-col justify-center items-center`}
         >
-         Hari Pernikahan
-        </motion.h1>
-        <Counter />
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        >
-         <p className={`${styles.h1} mt-20`}>Akad Nikah</p>
-         <p className={`${styles.p3} mt-12`}>Tanggal</p>
-         <p className={`${styles.p2}`}>26 Okt 2024</p>
-        </motion.div>
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        >
-         <p className={`${styles.p3} mt-12`}>Waktu</p>
-         <p className={`${styles.p2}`}>09.00 WIB</p>
-        </motion.div>
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        >
-         <p className={`${styles.p3} mt-12`}>Tempat</p>
-         <p className={`${styles.p3}`}>Kediaman Mempelai Wanita</p>
-         <p className={`${styles.p4}`}>
-          Jl.mawar 3, no.32, RT02/RW08, kp.karang mulya, desa, Karangsatria,
-          Kec. Tambun Utara, Kabupaten Bekasi, Jawa Barat 17510
-         </p>
-        </motion.div>
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        ></motion.div>
-        <motion.button
-         variants={fadingMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-         whileHover={{ scale: 1.1 }}
-         whileTap={{ scale: 0.9 }}
-         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-         className="bg-gradient-to-tr from-indigo-800 to-sky-700 text-yellow-500 font-bold mt-12 normal-case p-4 rounded-full border-4 border-yellow-500 w-60"
-        >
-         <PinDropIcon sx={{ color: "#facc15" }} /> Buka Map{" "}
-        </motion.button>
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        >
-         <p className={`${styles.h1} mt-20`}>Resepsi</p>
-         <p className={`${styles.p3} mt-12`}>Tanggal</p>
-         <p className={`${styles.p2}`}>26 Okt 2024</p>
-        </motion.div>
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        >
-         <p className={`${styles.p3} mt-12`}>Waktu</p>
-         <p className={`${styles.p2}`}>12.00 WIB</p>
-        </motion.div>
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        >
-         <p className={`${styles.p3} mt-12`}>Tempat</p>
-         <p className={`${styles.p3}`}>Kediaman Mempelai Wanita</p>
-         <p className={`${styles.p4}`}>
-          Jl.mawar 3, no.32, RT02/RW08, kp.karang mulya, desa, Karangsatria,
-          Kec. Tambun Utara, Kabupaten Bekasi, Jawa Barat 17510
-         </p>
-        </motion.div>
-        <motion.button
-         variants={fadingMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-         whileHover={{ scale: 1.1 }}
-         whileTap={{ scale: 0.9 }}
-         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-         className="bg-gradient-to-tr from-indigo-800 to-sky-700 text-yellow-500 font-bold mt-12 normal-case p-4 rounded-full border-4 border-yellow-500 w-60"
-        >
-         <PinDropIcon sx={{ color: "#facc15" }} /> Buka Map{" "}
-        </motion.button>
-        <motion.div
-         variants={fromBottomMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-        >
-         <p className={`${styles.p3} mt-12`}>Live Stream</p>
-         <p className={`${styles.p4} `}>
-          Kami akan menyiarkan upacara pernikahan secara virtual
-         </p>
-        </motion.div>
-        <motion.button
-         variants={fadingMotion}
-         initial="initial"
-         whileInView={"whileInView"}
-         whileHover={{ scale: 1.1 }}
-         whileTap={{ scale: 0.9 }}
-         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-         className="bg-gradient-to-tr from-indigo-800 to-sky-700 text-yellow-500 font-bold mt-12 normal-case p-4 rounded-full border-4 border-yellow-500 w-60"
-        >
-         <VideocamIcon sx={{ color: "#facc15" }} /> Live Stream{" "}
-        </motion.button>
-       </div>
+          <div className="relative w-[98%] h-full m-auto border-none">
+            <div className="relative h-auto inset-0 bg-gradient-to-tr from-amber-300 via-yellow-700 to-amber-500 p-[8px] rounded-lg">
+              <div className="w-full h-full bg-white py-20 px-8">
+                <motion.h1
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                  className={`${styles.h1}`}
+                >
+                  Hari Pernikahan
+                </motion.h1>
+                <Counter />
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                >
+                  <p className={`${styles.h1} mt-20`}>Akad Nikah</p>
+                  <p className={`${styles.p3} mt-12`}>Tanggal</p>
+                  <p className={`${styles.p2}`}>26 Okt 2024</p>
+                </motion.div>
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                >
+                  <p className={`${styles.p3} mt-12`}>Waktu</p>
+                  <p className={`${styles.p2}`}>09.00 WIB</p>
+                </motion.div>
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                >
+                  <p className={`${styles.p3} mt-12`}>Tempat</p>
+                  <p className={`${styles.p3}`}>Kediaman Mempelai Wanita</p>
+                  <p className={`${styles.p4}`}>
+                    Jl.mawar 3, no.32, RT02/RW08, kp.karang mulya, desa, Karangsatria,
+                    Kec. Tambun Utara, Kabupaten Bekasi, Jawa Barat 17510
+                  </p>
+                </motion.div>
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                ></motion.div>
+                <motion.button
+                  variants={fadingMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="bg-gradient-to-tr from-indigo-800 to-sky-700 text-yellow-500 font-bold mt-12 normal-case p-4 rounded-full border-4 border-yellow-500 w-60"
+                >
+                  <PinDropIcon sx={{ color: "#facc15" }} /> Buka Map{" "}
+                </motion.button>
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                >
+                  <p className={`${styles.h1} mt-20`}>Resepsi</p>
+                  <p className={`${styles.p3} mt-12`}>Tanggal</p>
+                  <p className={`${styles.p2}`}>26 Okt 2024</p>
+                </motion.div>
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                >
+                  <p className={`${styles.p3} mt-12`}>Waktu</p>
+                  <p className={`${styles.p2}`}>12.00 WIB</p>
+                </motion.div>
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                >
+                  <p className={`${styles.p3} mt-12`}>Tempat</p>
+                  <p className={`${styles.p3}`}>Kediaman Mempelai Wanita</p>
+                  <p className={`${styles.p4}`}>
+                    Jl.mawar 3, no.32, RT02/RW08, kp.karang mulya, desa, Karangsatria,
+                    Kec. Tambun Utara, Kabupaten Bekasi, Jawa Barat 17510
+                  </p>
+                </motion.div>
+                <motion.button
+                  variants={fadingMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="bg-gradient-to-tr from-indigo-800 to-sky-700 text-yellow-500 font-bold mt-12 normal-case p-4 rounded-full border-4 border-yellow-500 w-60"
+                >
+                  <PinDropIcon sx={{ color: "#facc15" }} /> Buka Map{" "}
+                </motion.button>
+                <motion.div
+                  variants={fromBottomMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                >
+                  <p className={`${styles.p3} mt-12`}>Live Stream</p>
+                  <p className={`${styles.p4} `}>
+                    Kami akan menyiarkan upacara pernikahan secara virtual
+                  </p>
+                </motion.div>
+                <motion.button
+                  variants={fadingMotion}
+                  initial="initial"
+                  whileInView={"whileInView"}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="bg-gradient-to-tr from-indigo-800 to-sky-700 text-yellow-500 font-bold mt-12 normal-case p-4 rounded-full border-4 border-yellow-500 w-60"
+                >
+                  <VideocamIcon sx={{ color: "#facc15" }} /> Live Stream{" "}
+                </motion.button>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </>
+    );
+  };
+
+  const images = [
+    {
+      photo: "/photo/1.jpeg",
+    },
+    {
+      photo: "/photo/2.jpeg",
+    },
+    {
+      photo: "/photo/3.jpeg",
+    },
+    {
+      photo: "/photo/4.jpeg",
+    },
+    {
+      photo: "/photo/5.jpeg",
+    },
+    {
+      photo: "/photo/cover.jpeg",
+    },
+  ];
+
+  const Body3 = () => {
+    return (
+      <div className="flex flex-col justify-center items-center">
+        <h1 className={`${styles.h1}`}>Momen Kami</h1>
+        <MyCarousel images={images} />
       </div>
-     </div>
-    </Container>
-   </>
-  );
- };
+    );
+  };
 
- const images = [
-  {
-   photo: "/photo/1.jpeg",
-  },
-  {
-   photo: "/photo/2.jpeg",
-  },
-  {
-   photo: "/photo/3.jpeg",
-  },
-  {
-   photo: "/photo/4.jpeg",
-  },
-  {
-   photo: "/photo/5.jpeg",
-  },
-  {
-   photo: "/photo/cover.jpeg",
-  },
- ];
-
- const Body3 = () => {
-  return (
-   <div className="flex flex-col justify-center items-center">
-    <h1 className={`${styles.h1}`}>Momen Kami</h1>
-    <MyCarousel images={images} />
-   </div>
-  );
- };
-
- const stories = [
-  {
-   title: "Pertemuan",
-   description: `Kita adalah teman masa kecil saat SD dan SMP namun berpisah saat SMA dan kuliah akhirnya dipertemukan kembali melalui sosial media seiiring berjalannya waktu kami terus berkomunikasi dan bertukar cerita hingga akhirnya kita menjalani komitemen satu sama lain`,
-   date: "18 Oktober 2021",
-  },
-  {
-   title: "Lamaran",
-   description: `Setelah bebrapa tahun kami saling mengenal membuat kami yakin satu sama lain untuk menjalin hubungan yang lebih serius akhirnya a ihsan menyatakan keseriusan nya dengan membawa orangtuanya.`,
-   date: "29 Juni 2024",
-  },
-  {
-   title: "Menikah",
-   description: `Pernikahan kita bukan hanya sekadar sebuah acara, tetapi awal dari sebuah babak baru dalam hidup kita. Sebuah babak yang dipenuhi dengan cinta, kerja sama, dan impian-impian yang akan kita wujudkan bersama. Kita sadar bahwa perjalanan ini tidak selalu mudah, tetapi kita percaya bahwa dengan saling mendukung, kita akan mampu menghadapi segala sesuatu yang akan datang.
+  const stories = [
+    {
+      title: "Pertemuan",
+      description: `Kita adalah teman masa kecil saat SD dan SMP namun berpisah saat SMA dan kuliah akhirnya dipertemukan kembali melalui sosial media seiiring berjalannya waktu kami terus berkomunikasi dan bertukar cerita hingga akhirnya kita menjalani komitemen satu sama lain`,
+      date: "18 Oktober 2021",
+    },
+    {
+      title: "Lamaran",
+      description: `Setelah bebrapa tahun kami saling mengenal membuat kami yakin satu sama lain untuk menjalin hubungan yang lebih serius akhirnya a ihsan menyatakan keseriusan nya dengan membawa orangtuanya.`,
+      date: "29 Juni 2024",
+    },
+    {
+      title: "Menikah",
+      description: `Pernikahan kita bukan hanya sekadar sebuah acara, tetapi awal dari sebuah babak baru dalam hidup kita. Sebuah babak yang dipenuhi dengan cinta, kerja sama, dan impian-impian yang akan kita wujudkan bersama. Kita sadar bahwa perjalanan ini tidak selalu mudah, tetapi kita percaya bahwa dengan saling mendukung, kita akan mampu menghadapi segala sesuatu yang akan datang.
      `,
-   date: "26 Oktober 2024",
-  },
-  {
-   title: "Perceraian",
-   description: `Tamat`,
-   date: "27 Oktober 2024",
-  },
- ];
+      date: "26 Oktober 2024",
+    },
+    {
+      title: "Perceraian",
+      description: `Tamat`,
+      date: "27 Oktober 2024",
+    },
+  ];
 
  const Body4 = () => {
   return (
@@ -591,34 +591,36 @@ export default function Evander() {
   );
  };
 
- return (
-  <AnimatePresence>
-   {!isOpened ? (
-    <motion.div
-     key={"header"}
-     initial={{ opacity: 0, y: -200, scale: 0.5 }}
-     animate={{ opacity: 1, y: 0, scale: 1 }}
-     exit={{ opacity: 0, y: 300, scale: 0 }}
-     transition={{ duration: 1 }}
-    >
-     <Header />
-    </motion.div>
-   ) : (
-    <motion.div
-     key={"body"}
-     initial={{ opacity: 0, y: -200, scale: 0.5 }}
-     animate={{ opacity: 1, y: 0, scale: 1 }}
-     exit={{ opacity: 0, y: 200, scale: 0 }}
-     transition={{ duration: 1, delay: 1 }}
-    >
-     <Body1 />
-     <Body2 />
-     <Body3 />
-     <Body4 />
-     <Body5 />
-     <Box className="h-screen"></Box>
-    </motion.div>
-   )}
-  </AnimatePresence>
- );
+  return (
+    <AnimatePresence>
+      {!isOpened ? (
+        <motion.div
+          key={"header"}
+          initial={{ opacity: 0, y: -200, scale: 0.5 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 300, scale: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <Header />
+        </motion.div>
+      ) : (
+        <>
+          <motion.div
+            key={"body"}
+            initial={{ opacity: 0, y: -200, scale: 0.5 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 200, scale: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <Body1 />
+            <Body2 />
+            <Body3 />
+            <Body4 />
+            <Body5 />
+            <Box className="h-screen"></Box>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
 }
