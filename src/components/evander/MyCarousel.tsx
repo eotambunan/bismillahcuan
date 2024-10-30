@@ -18,7 +18,6 @@ export type MyCarousel = {
 };
 
 const MyCarousel = (props: MyCarousel) => {
-    console.log(props.images)
 
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const plugin = useRef(
